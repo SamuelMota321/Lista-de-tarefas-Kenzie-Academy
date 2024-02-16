@@ -10,7 +10,7 @@
 
   <title>Lista de Tarefas</title>
 
-  <script src="./script.js" defer></script>
+  <script src="./assets/js/script.js" defer></script>
 </head>
 
 <body>
@@ -28,11 +28,11 @@
       <div class="form__input-container">
         <input id="input_title" class="form__input--text input__box" type="text"
           placeholder="Digitar titulo da tarefa" />
-        <select class="form__input--priority input__box">
+        <select class="form__input--priority input__box" required>
           <option value="">Selecionar tipo</option>
-          <option value="urgente">Urgente</option>
-          <option value="importante">Importante</option>
           <option value="normal">Normal</option>
+          <option value="importante">Importante</option>
+          <option value="urgente">Urgente</option>
         </select>
       </div>
       <button class="form__button--add-task">
@@ -41,15 +41,8 @@
     </form>
 
     <section class="tasks__container">
-      <h2>Tarefas</h2>
+      <h2 class="tasks__title">Tarefas</h2>
       <ul class="tasks__list">
-        <li class="task__item">
-          <div class="task-info__container">
-            <span class="task-type span-urgent"></span>
-            <p>Comprar comida para o gato</p>
-          </div>
-          <button class="task__button--remove-task"></button>
-        </li>
       </ul>
     </section>
   </main>
